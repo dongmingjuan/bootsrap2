@@ -15,3 +15,125 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+ // .persona-grid {
+ //     margin-top: 102px
+ // }
+//* 调整图片位置使用！＊//
+
+
+ @media (min-width: 480px) {
+     .persona-grid .row {
+         display:flex;
+         padding-top: 12px;
+         padding-bottom: 12px
+     }
+ }
+ //* 调整图片大小使用，如果没有这个css，图片会变得很大，且两张图片不会并列排列！＊//
+
+ .persona-grid .persona-link {
+     display: block;
+     position: relative
+ }
+ //* 调整链接位置，如果没有这个css，鼠标移动到图片时，链接的阴影部分会占据整个屏幕 *//
+
+ .persona-grid .persona-link .info-peek {
+     text-align: center;
+     -webkit-transition: opacity .25s ease-out 0s;
+     -moz-transition: opacity .25s ease-out 0s;
+     -ms-transition: opacity .25s ease-out 0s;
+     -o-transition: opacity .25s ease-out 0s;
+     transition: opacity .25s ease-out 0s;
+     opacity: 1;
+     position: absolute;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     z-index: 4;
+     color: #fff
+ }
+//* 调整链接位置，如果没有这个css，鼠标移动到图片时，链接的阴影部分会超过图片 *//
+
+ // .persona-grid .persona-link .info-peek h2 {
+ //     margin-top: 24px;
+ //     margin-bottom: 12px;
+ //     color: #fff;
+ //     line-height: 0.8;
+ //     font-size: 4.2em
+ // }
+
+
+ .persona-grid .persona-link .overlay {
+     -webkit-transition: opacity .25s ease-out 0s;
+     -moz-transition: opacity .25s ease-out 0s;
+     -ms-transition: opacity .25s ease-out 0s;
+     -o-transition: opacity .25s ease-out 0s;
+     transition: opacity .25s ease-out 0s;
+     opacity: 0;
+     position: absolute;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     z-index: 3
+ }
+//* 调整背景蓝色图片使用，如果没有这个css，鼠标移动到图片时，背景的蓝色图片将不回出现。 *//
+
+ .persona-grid .persona-link>img {
+     border: 1px solid #000;
+     display: block;
+     width: 100%
+ }
+ //* 调整图片边框使用，如果没有这个css，图片将不会显示边框 *//
+
+ .persona-grid .persona-link:hover .info-peek .info-default,.persona-grid .persona-link:hover .overlay {
+     opacity: 1
+ }
+//* 当鼠标移动到图片时，可以出现蓝色背景和字体 *//
+
+ .persona-grid .persona-link .info-default {
+     opacity: 0;
+     display: block;
+     position: absolute;
+     width: 100%
+ }
+ //* 作用是使得白色自己藏在图片下面，只有鼠标移动到图片上时，字体才会和背景图片一起出现 *//
+
+
+
+ // .persona-grid.filtering .persona-cell .overlay {
+ //     opacity: 0
+ // }
+
+
+ .persona-amy .persona-link .overlay {
+     background-color: rgba(35,165,189,0.85)
+ }
+//* 给amy这个人的图片上加入一张蓝色背景的图片 *//
+
+
+ .persona-amy .persona-link img {
+     border-color: #23a5bd !important
+ }
+ //* 给amy这个人的图片上加上蓝色边框 *//
+
+
+ // .persona-amy #highlight-card-mobile.mobile-only {
+ //     background-color: #23a5bd
+ // }
+ //
+ // .outline-amy {
+ //     border: 1px solid #23a5bd
+ // }
+
+ .persona-ida .persona-link .overlay {
+
+    background-color: rgba(35,165,189,0.85)
+}
+//* 给ida这个人的图片上加入一张蓝色背景的图片 *//
+
+.persona-ida .persona-link img {
+    border-color: #23a5bd !important
+}
+//* 给ida这个人的图片上加上蓝色边框 *//
