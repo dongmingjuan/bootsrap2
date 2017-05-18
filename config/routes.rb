@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   # root 'welcomes#index'
   resources :welcomes1
   resources :welcomes2
+  resources :welcomes3
   root 'welcomes3#index'
 end
