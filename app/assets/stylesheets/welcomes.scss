@@ -39,6 +39,11 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 */
+ .persona-grid {
+    margin-top: 102px
+ }
+//* 调整图片位置使用！＊//
+
 @media (min-width: 480px) {
     .persona-grid .row {
      display:flex;
