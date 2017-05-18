@@ -44,7 +44,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
      display:flex;
     }
 }
-//* 调整图片大小使用，如果没有这个css，图片会变得很大，且两张图片不会并列排列！＊//
+//* 调整图片大小使用，如果没有这个css，背景图片会变得很大，且两张图片不会并列排列！＊//
 
 .persona-grid .persona-link {
     display: block;
@@ -62,7 +62,16 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     z-index: 4;
     color: #fff
 }
-//* 调整链接位置，如果没有这个css，鼠标移动到图片时，链接的阴影部分会超过图片和调整字体的位置及格式。 *//
+//* 调整字体的位置，z-index: 4 & position: absolute使字体可以悬浮于北京图片调整链接位置 *//
+
+.persona-grid .persona-link .info-default {
+    opacity: 0;
+    display: block;
+    position: absolute;
+    width: 100%
+}
+//* 作用是使得白色自字体藏在图片下面，只有鼠标移动到图片上时，字体才会和背景图片一起出现 *//
+
 
 .persona-grid .persona-link .overlay {
     opacity: 0;
@@ -80,20 +89,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 }
 //* 调整图片边框使用，如果没有这个css，图片将不会显示边框 *//
 
-.persona-grid .persona-link:hover .info-peek .info-default,.persona-grid .persona-link:hover .overlay {
-    opacity: 1
-}
-//* 当鼠标移动到图片时，可以出现蓝色背景和字体 *//
-
-.persona-grid .persona-link .info-default {
-    opacity: 0;
-    display: block;
-    position: absolute;
-    width: 100%
-}
-//* 作用是使得白色自字体藏在图片下面，只有鼠标移动到图片上时，字体才会和背景图片一起出现 *//
-
-
 .persona-amy .persona-link .overlay {
     background-color: rgba(35,165,189,0.85)
 }
@@ -105,13 +100,19 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 }
 //* 给amy这个人的图片上加上蓝色边框 *//
 
-.persona-ida .persona-link .overlay {
-
-   background-color: rgba(35,165,189,0.85)
+.persona-grid .persona-link:hover .info-peek .info-default,.persona-grid .persona-link:hover .overlay {
+    opacity: 1
 }
+//* 当鼠标移动到图片时，可以出现蓝色背景和字体 *//
+
+
+// .persona-ida .persona-link .overlay {
+//
+//    background-color: rgba(35,165,189,0.85)
+// }
 //* 给ida这个人的图片上加入一张蓝色背景的图片 *//
 
-.persona-ida .persona-link img {
-   border-color: #23a5bd !important
-}
+// .persona-ida .persona-link img {
+//    border-color: #23a5bd !important
+// }
 //* 给ida这个人的图片上加上蓝色边框 *//
