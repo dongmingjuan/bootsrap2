@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :welcomes3
   # root 'welcomes3#index'
   root 'welcomes4#index'
+  # root 'welcomes5#index'
 end
